@@ -68,8 +68,8 @@ const PopularFlights = () => {
                   {DateTime.fromMillis(flight.aTime * 1000).toFormat('hh:mm')}
                 </p>
               </div>
-              <button>
-                <Link to={`/flight/${flight.cityFrom}/${flight.id}`}>
+              <button className='flight__button'>
+                <Link className='flight__button--link' to={`/flight/${flight.cityFrom}/${flight.id}`}>
                   See More Info
                 </Link>
               </button>

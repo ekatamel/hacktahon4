@@ -59,20 +59,24 @@ code {
 .flights__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 8em;
+  gap: 2em;
+  padding: 0 3em;
+  /* justify-content: space-evenly; */
+
+  margin-top: 5em;
 }
 
 .flight {
   display: flex;
-  padding: 2em;
+  padding: 1.5em;
   flex-direction: column;
   /* border: 1px solid black; */
-  width: 25%;
+  width: 30%;
   margin: 10px;
   /* border: 1px solid black; */
   background: linear-gradient(to right, #cafbe8, #dcf7ed);
   border-radius: 16px;
+
 }
 
 .flight__title {
@@ -93,10 +97,19 @@ code {
   height: 30px;
   background-color: #3bb3b7;
   border: none;
-  color: white;
+
   font-weight: bold;
   font-size: 1.2em;
   border-radius: 7px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.flight__button--link {
+
+  text-decoration: none;
+  color: white;
+
 }
 
 .flight__times {
@@ -199,6 +212,7 @@ nav {
   font-size: 3em;
   color: #2F4858;
   text-align: center;
+  margin-top: 2em;
 }
 
 .flights__subheadline {
