@@ -85,7 +85,10 @@ const PopularFlights = () => {
                 </p>
               </div>
               <button className='flight__button'>
-                <Link className='flight__button--link' to={`/flight/${flight.cityFrom}/${flight.id}`}>
+                <Link
+                  className='flight__button--link'
+                  to={`/flight/${flight.cityFrom}/${flight.id}`}
+                >
                   See More Info
                 </Link>
               </button>
@@ -93,12 +96,12 @@ const PopularFlights = () => {
           );
         })}
       </div>
-      <button disabled={offset === 0} onClick={() => setOffset(offset - 10)}>
+      {/* <button disabled={offset === 0} onClick={() => setOffset(offset - 10)}>
         Previews 10 flights
       </button>
-      <button onClick={() => setOffset(offset + 10)}>Next 10 flights</button>
+      <button onClick={() => setOffset(offset + 10)}>Next 10 flights</button> */}
     </div>)
-  );
+  )
 };
 
 export default PopularFlights;
