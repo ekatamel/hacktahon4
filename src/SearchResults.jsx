@@ -5,7 +5,7 @@ import { DateTime } from 'luxon';
 function SearchResults({results}) {
 
     console.log(results)
-    return (
+    return ( results &&
         <div className="search__results">
 
 
@@ -46,7 +46,7 @@ function SearchResults({results}) {
                                 // }
                                 result.route.map((route, index) => {
                                     if (index < (result.route.length) - 1) {
-                                        return <span key={index}>{route.cityTo}</span>
+                                        return <span key={index}>{route.cityTo} </span>
                                     }
 
                                     // return <span>{route.cityTo}</span>
