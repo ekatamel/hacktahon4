@@ -6,7 +6,12 @@ const SearchResultsDestination = ({ results }) => {
       <div className='search__whisper'>
         {results.map((result, i) => {
           return (
-            <Link to={`/locations/${result.code}`} key={i}>
+            <Link
+              style={{ textDecoration: 'none', color: 'white' }}
+              className='search__whisper-result'
+              to={`/locations/${result.code}`}
+              key={i}
+            >
               <p>{result.name}</p>
             </Link>
           );

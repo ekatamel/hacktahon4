@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import SearchResultsDestination from './SearchResultsDestination';
+import SearchResultsLocation from './SearchResultsLocation';
 
 const SearchBarDestination = () => {
   const [query, setQuery] = useState('');
@@ -22,23 +22,28 @@ const SearchBarDestination = () => {
   }, []);
 
   return (
-    <div>
-      <input
-        type='queryFrom'
-        onChange={(e) => {
-          getData();
-          setQuery(e.target.value);
-        }}
-      />
-      <button
-      // onClick={() => {
-      //   getData();
-      // }}
-      >
-        Search for Location
-      </button>
-      <div>
-        <SearchResultsDestination results={results} />
+    <div className='search__locations_main'>
+      <div className='search__locations_container'>
+        <h2 className='search__title'>Search for a location!</h2>
+        <div className='search__input-container'>
+          <input
+            className='search__locations_inputs'
+            type='queryFrom'
+            onChange={(e) => {
+              getData();
+              setQuery(e.target.value);
+            }}
+          />
+          <button
+            className='search__locations_button'
+            // onClick={() => {
+            //   getData();
+            // }}
+          >
+            Search for Location
+          </button>
+          {query && <SearchResultsLocation results={results} />}
+        </div>
       </div>
     </div>
   );

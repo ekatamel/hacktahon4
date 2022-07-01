@@ -25,10 +25,12 @@ const LocationDetail = () => {
   return (
     <div>
       {location && (
-        <div>
+        <div className='location__detail'>
           <h2>{location.name}</h2>
-          <p>Population: {location.population}</p>
-          <p>Number of hotels: {location.hotels}</p>
+          <div className='location__detail-info'>
+            <p>Population: {location.population}</p>
+            <p>Number of hotels: {location.hotels}</p>
+          </div>
         </div>
       )}
       <button>

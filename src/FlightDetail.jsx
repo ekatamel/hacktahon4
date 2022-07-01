@@ -27,26 +27,29 @@ const LocationDetail = ({ flight }) => {
   return (
     <div>
       {flightInfo && (
-        <div>
+        <div className='flight__detail'>
           <h2>
             {flightInfo.cityFrom} to {flightInfo.cityTo}
           </h2>
-          <p className='flight__date'>
-            {' '}
-            {DateTime.fromMillis(flightInfo.aTime * 1000).toFormat(
-              'dd LLL yyyy'
-            )}
-          </p>
-          <div className='flight__times'>
+          <div className='flight__detail-info'>
+            <p className='flight__date'>
+              {' '}
+              <strong>Date:</strong>{' '}
+              {DateTime.fromMillis(flightInfo.aTime * 1000).toFormat(
+                'dd LLL yyyy'
+              )}
+            </p>
             <p>
-              Departure:
+              <strong>Departure:</strong>
               {DateTime.fromMillis(flightInfo.dTime * 1000).toFormat('hh:mm')}
             </p>
             <p>
-              Arrival:{' '}
+              <strong>Arrival:</strong>{' '}
               {DateTime.fromMillis(flightInfo.aTime * 1000).toFormat('hh:mm')}
             </p>
-            <p>Price: {flightInfo.price} €</p>
+            <p>
+              <strong>Price:</strong> {flightInfo.price} €
+            </p>
           </div>
         </div>
       )}
