@@ -1,3 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 .App {
   text-align: center;
 }
@@ -52,14 +71,14 @@
   width: 25%;
   margin: 10px;
   /* border: 1px solid black; */
-  background: linear-gradient(to right, #CAFBE8, #dcf7ed);
+  background: linear-gradient(to right, #cafbe8, #dcf7ed);
   border-radius: 16px;
 }
 
-.flight__title  {
+.flight__title {
   font-size: 2em;
   text-align: center;
-  color: #2F4858;
+  color: #2f4858;
   margin: 0.7em;
 }
 
@@ -72,7 +91,7 @@
 
 .flight__button {
   height: 30px;
-  background-color: #3BB3B7;
+  background-color: #3bb3b7;
   border: none;
   color: white;
   font-weight: bold;
@@ -91,7 +110,7 @@
 
 nav {
   width: 100%;
-  background: linear-gradient(to right, #3BB3B7, #7FFFD4);
+  background: linear-gradient(to right, #3bb3b7, #7fffd4);
   margin-bottom: 20;
   padding: 15px;
   text-align: center;
@@ -101,7 +120,78 @@ nav {
   padding: 0px 20px;
   text-decoration: none;
   font-weight: bold;
-  color: #2F4858
+  color: #2f4858;
+}
+
+.search__whisper {
+  background-color: #3bb3b7;
+  /* display: flex;
+  flex-direction: column; */
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 50%;
+  height: auto;
+  padding: 20px;
+}
+
+.search__whisper-result p {
+  padding: 5px 0px;
+}
+
+.search__locations_container {
+  display: flex;
+  border-radius: 50px;
+  justify-content: center;
+  align-content: center;
+  row-gap: 3em;
+  align-items: center;
+  height: 400px;
+  background: linear-gradient(to right, #adfae0, #7fffd4, #adfae0);
+  /* background-color: #7fffd4; */
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10em;
+  flex-wrap: wrap;
+}
+
+.search__input-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__locations_inputs {
+  margin: 0;
+}
+
+.search__locations_button {
+  margin: 0;
+  padding: 1em;
+  font-weight: bold;
+  background-color: #3bb3b7;
+  color: white;
+  border: none;
+  /* box-shadow: 0 0 10px grey; */
+  height: 50px;
+  width: auto;
+  margin-left: 20px;
+}
+
+.location__detail {
+  padding: 50px;
+}
+
+.flight__detail {
+  padding: 50px;
+  background-color: #7fffd4;
+}
+
+.flight__detail-info {
+  padding: 50px;
+  background-color: #7fffd4;
 }
 
 
