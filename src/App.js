@@ -19,7 +19,10 @@ function App() {
           Home
         </Link>
         <Link to='/search-main' className='nav__link'>
-          Search
+          Search locations
+        </Link>
+        <Link to='/search-flights' className='nav__link'>
+          Search flights
         </Link>
       </nav>
       {/* home page Route */}
