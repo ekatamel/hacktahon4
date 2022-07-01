@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
 import { Link } from 'react-router-dom';
+import departures from './departures.png';
+import landing from './landing.png';
+import calendar from './calendar.png';
+import directFlight from './direct-flight.png';
 
 const PopularFlights = () => {
   const [flights, setFlights] = useState([]);
@@ -22,6 +26,8 @@ const PopularFlights = () => {
 
   return (
     <div className='flights__main'>
+      <h1 className='flights__headline'>The most popular flights.</h1>
+      <h2 className='flights__subheadline'>Book now!</h2>
       <div className='flights__list'>
         {flights.map((flight) => {
           return (
@@ -37,10 +43,13 @@ const PopularFlights = () => {
                 {flight.routes.length > 1 ? (
                   <p>Number of Transfers: {flight.routes.length}</p>
                 ) : (
-                  <p>Direct flight</p>
+                  <p>
+                    <img className='flight__logo' src={directFlight} alt='' />
+                    Direct flight
+                  </p>
                 )}
                 <p className='flight__date flight__text'>
-                  {' '}
+                  <img className='flight__logo' src={calendar} alt='' />
                   {DateTime.fromMillis(flight.aTime * 1000).toFormat(
                     'dd LLL yyyy'
                   )}
@@ -49,11 +58,13 @@ const PopularFlights = () => {
 
               <div className='flight__times'>
                 <p>
-                  Departure:
+                  <img className='flight__logo' src={departures} alt='' />
                   {DateTime.fromMillis(flight.dTime * 1000).toFormat('hh:mm')}
                 </p>
+
                 <p>
-                  Arrival:{' '}
+                  <img className='flight__logo' src={landing} alt='' />
+                  {/* Arrival:{' '} */}
                   {DateTime.fromMillis(flight.aTime * 1000).toFormat('hh:mm')}
                 </p>
               </div>
