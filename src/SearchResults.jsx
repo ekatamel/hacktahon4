@@ -54,12 +54,13 @@ function SearchResults({results}) {
                                 })
                                 
                             )
-                            : "0 stopovers"
+                            : "No stopovers"
                             
                             }
                             </td>
                             <td>{result.availability.seats}</td>
-                            <td>{result.price} $</td>
+                            <td>{result.price} €
+</td>
                         </tr>
                     )
                 })

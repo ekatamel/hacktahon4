@@ -26,20 +26,26 @@ const PopularFlights = () => {
           return (
             <div key={flight.id} className='flight'>
               <div className='flight__main'>
-                <strong>{flight.cityFrom}</strong> to{' '}
-                <strong>{flight.cityTo}</strong>
-                {flight.routes.length > 1 ? (
+                <p className='flight__title'>                <strong>{flight.cityFrom}</strong> to{' '}
+                <strong>{flight.cityTo}</strong></p>
+
+
+              </div>
+              <div className='flight__info'>
+              {flight.routes.length > 1 ? (
                   <p>Number of Transfers: {flight.routes.length}</p>
                 ) : (
                   <p>Direct flight</p>
                 )}
-              </div>
-              <p className='flight__date'>
+              <p className='flight__date flight__text'>
                 {' '}
                 {DateTime.fromMillis(flight.aTime * 1000).toFormat(
                   'dd LLL yyyy'
                 )}
               </p>
+
+              </div>
+
               <div className='flight__times'>
                 <p>
                   Departure:
@@ -50,7 +56,7 @@ const PopularFlights = () => {
                   {DateTime.fromMillis(flight.aTime * 1000).toFormat('hh:mm')}
                 </p>
               </div>
-              <button>See More Info</button>
+              <button className='flight__button'>See More Info</button>
             </div>
           );
         })}
