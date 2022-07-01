@@ -13,7 +13,7 @@ const SearchBarDestination = () => {
     const response = await fetch(url);
     const results = await response.json();
 
-    // console.log(results.locations);
+    console.log(results.locations);
     setResults(results.locations);
   };
 

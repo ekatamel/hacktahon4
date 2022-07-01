@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
+import { Link } from 'react-router-dom';
 
 const PopularFlights = () => {
   const [flights, setFlights] = useState([]);
   const [offset, setOffset] = useState(0);
 
-  const url = `https://api.skypicker.com/flights?fly_from=PRG&partner=data4youcbp202106&limit=10&sort=date&sroffset=${offset}`;
+  const url = `https://api.skypicker.com/flights?fly_from=PRG&partner=data4youcbp202106&limit=15&sort=date&sroffset=${offset}`;
 
   const getData = async () => {
     const response = await fetch(url);
     const popularFlightsData = await response.json();
 
-    console.log(popularFlightsData);
+    // console.log(popularFlightsData);
     setFlights(popularFlightsData.data);
   };
 
@@ -50,7 +51,11 @@ const PopularFlights = () => {
                   {DateTime.fromMillis(flight.aTime * 1000).toFormat('hh:mm')}
                 </p>
               </div>
-              <button>See More Info</button>
+              <button>
+                <Link to={`/flight/${flight.cityFrom}/${flight.id}`}>
+                  See More Info
+                </Link>
+              </button>
             </div>
           );
         })}
