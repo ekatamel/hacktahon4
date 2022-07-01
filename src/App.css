@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.flights__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flight {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  width: 30%;
+  margin: 10px;
+}
+
+.flight__times {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flight__times p {
+  /* width: 100px; */
+}
