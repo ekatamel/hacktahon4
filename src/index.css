@@ -204,3 +204,15 @@ svg {
 		 stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
 	}
 }
+
+.flight__logo {
+  width: 25px;
+  margin-right: 10px;
+  /* display: flex;
+  align-items: center; */
+}
+
+.flight__times p {
+  display: flex;
+  align-items: center;
+}

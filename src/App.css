@@ -41,6 +41,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 8em;
 }
 
 .flight {
@@ -64,6 +65,9 @@
 
 .flight__info {
   display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
 }
 
 .flight__button {
@@ -79,7 +83,10 @@
 .flight__times {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  column-gap: 6em;
+  /* justify-content: flex-start; */
+  width: 80%;
+  margin: auto;
 }
 
 nav {
@@ -96,3 +103,18 @@ nav {
   font-weight: bold;
   color: #2F4858
 }
+
+
+.flights__headline {
+  font-size: 3em;
+  color: #2F4858;
+  text-align: center;
+}
+
+.flights__subheadline {
+  font-size: 4em;
+  color: #3BB3B7;
+  text-align: center;
+  margin-top: 1.2em;
+}
+
